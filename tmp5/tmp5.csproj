@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E71581D0-FA15-4172-BB4D-2C1C91779678}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>tmp5</RootNamespace>
+    <AssemblyName>tmp5</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Speech" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ControlManager.cs" />
+    <Compile Include="GameManager.cs" />
+    <Compile Include="SinglePlayerGameManager.cs" />
+    <Compile Include="MenuManager.cs" />
+    <Compile Include="CustomLevelChoice\MenuLevelCustomController.cs" />
+    <Compile Include="CustomLevelChoice\MenuLevelCustomView.cs" />
+    <Compile Include="Model\FieldConfig.cs" />
+    <Compile Include="Abstract\MenuController.cs" />
+    <Compile Include="ChooseLevelScreen\MenuLevelController.cs" />
+    <Compile Include="ChooseLevelScreen\MenuLevelView.cs" />
+    <Compile Include="Model\GameTypeConfig.cs" />
+    <Compile Include="Model\MultiplayerConfig.cs" />
+    <Compile Include="Model\ResultConfig.cs" />
+    <Compile Include="Multiplayer\JoinView\MultiplayerJoinMenuController.cs" />
+    <Compile Include="Multiplayer\JoinView\MultiplayerJoinMenuView.cs" />
+    <Compile Include="Multiplayer\CreateView\MultiplayerCreateMenuController.cs" />
+    <Compile Include="Multiplayer\CreateView\MultiplayerCreateMenuView.cs" />
+    <Compile Include="Multiplayer\StartView\MuliplayerControllerView.cs" />
+    <Compile Include="Multiplayer\StartView\MultiplayerMenuView.cs" />
+    <Compile Include="MusicManager.cs" />
+    <Compile Include="PlayerManager.cs" />
+    <Compile Include="StartScreen\StartMenuController.cs" />
+    <Compile Include="StartScreen\StartMenuView.cs" />
+    <Compile Include="Abstract\MenuView.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Statistics\StatisticMenuController.cs" />
+    <Compile Include="Statistics\StatisticMenuView.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Music\MenuMusic8bit.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Music\PlayMusic8bit.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MultiplayerThread\MultiplayerThread.csproj">
+      <Project>{c1323a2e-475d-49ae-a978-00789bc9f181}</Project>
+      <Name>MultiplayerThread</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StatisticsManager\StatisticsManager.csproj">
+      <Project>{dca21121-cd2e-40c4-bc7f-dd33bd75bf64}</Project>
+      <Name>StatisticsManager</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
