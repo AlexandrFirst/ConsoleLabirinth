@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.902
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33122.133
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tmp5", "tmp5\tmp5.csproj", "{E71581D0-FA15-4172-BB4D-2C1C91779678}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameThread", "tmp5\GameThread.csproj", "{E71581D0-FA15-4172-BB4D-2C1C91779678}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StatisticsManager", "StatisticsManager\StatisticsManager.csproj", "{DCA21121-CD2E-40C4-BC7F-DD33BD75BF64}"
 EndProject
